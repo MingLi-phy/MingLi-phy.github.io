@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    利用Github和hexo搭建个人博客 |  Ayer
+    利用Github和Hexo搭建个人博客 |  Ayer
   </title>
   
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -41,7 +41,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  利用Github和hexo搭建个人博客
+  利用Github和Hexo搭建个人博客
 </h1>
   
 
@@ -74,7 +74,7 @@
       
 
       
-      <p>这篇文章简略概括利用Github和hexo搭建个人博客的步骤。<a href="https://github.com/" target="_blank" rel="noopener">Github</a>是一个面向开源及私有软件项目的托管平台，本身可用来下载和学习大神们的代码。其中的Repositories(仓库)可用来储存个人博客的数据。<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是一个快速、简洁且高效的博客框架。Hexo使用Markdown(或其他渲染引擎)解析文章，可利用靓丽的主题生成静态网页。关于如何利用这两样工具来搭建博客，网上已有很多的教程。本网站主要参考<a href="http://www.xuyankun.cn/2017/05/06/pages/#more" target="_blank" rel="noopener">Yankun’s Blog</a>和<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">小茗同学的博客园</a>而成功搭建。现在只简介搭建的主要步骤，至于其中的细节可参照上述两篇博文。</p>
+      <p>这篇文章简略概括利用Github和Hexo搭建个人博客的步骤。<a href="https://github.com/" target="_blank" rel="noopener">Github</a>是一个面向开源及私有软件项目的托管平台，本身可用来下载和学习大神们的代码。其中的Repositories(仓库)可用来储存个人博客的数据。<a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>是一个快速、简洁且高效的博客框架。Hexo使用<code>Markdown</code>(或其他渲染引擎)解析文章，可利用靓丽的主题生成静态网页。关于如何利用这两样工具来搭建博客，网上已有很多的教程。本网站主要参考<a href="http://www.xuyankun.cn/2017/05/06/pages/#more" target="_blank" rel="noopener">Yankun’s Blog</a>和<a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">小茗同学的博客园</a>而成功搭建。现在只简介搭建的主要步骤，至于其中的细节可参照上述两篇博文。</p>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><a href="#·前奏">1. 前奏</a></p>
 <p><a href="#Github">1. 1  Github pages</a></p>
 <p><a href="#安装Hexo">1. 2  安装Hexo</a></p>
@@ -92,16 +92,16 @@
 <p> git config –global user.name “username”</p>
 </blockquote>
 <blockquote>
-<p> git config –global user.email “<a href="mailto:your_email@example.com">your_email@example.com</a>“</p>
+<p> git config –global user.email “<a href="mailto:youremail@example.com">youremail@example.com</a>“</p>
 </blockquote>
-<p>其中，“username”和”<a href="mailto:your_email@example.com">your_email@example.com</a>“分别是自己的Github用户名及注册Github时用的邮箱。</p>
+<p>其中，”username”和”<a href="mailto:youremail@example.com">youremail@example.com</a>“分别是自己的Github用户名及注册Github时用的邮箱。</p>
 <p>配置完成后，用以下代码查看自己的配置信息:</p>
 <blockquote>
 <p>git config –list</p>
 </blockquote>
 <p><strong>连接Git和Github</strong>：鼠标右键任意地方，选择 <code>Git Bash Here</code> ， 输入：</p>
 <blockquote>
-<p>ssh-keygen -t rsa -C “<a href="mailto:your_email@example.com">your_email@example.com</a>“</p>
+<p>ssh-keygen -t rsa -C “<a href="mailto:youremail@example.com">youremail@example.com</a>“</p>
 </blockquote>
 <p>回车运行后，最终会在<code>C:\Users\Administrator</code>生成一个<code>.ssh</code>文件，打开后会发现文件<code>id_rsa.pub</code>。然后右键用文本编辑器打开，用 <code>ctrl + A</code> 全选然后<code>ctrl + C</code> 复制。</p>
 <p>接着进入<code>Github</code>主页，选择<code>setting</code>，创建新的 <code>SSH key</code> ，其中title随意，在key里面粘贴刚才复制的内容，点击 <code>Add SSH key</code> 完成。</p>
