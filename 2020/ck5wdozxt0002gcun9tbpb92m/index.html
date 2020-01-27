@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    他山之石 可以攻玉 |  Ayer
+    Shell的基础命令 |  Ayer
   </title>
   
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -33,7 +33,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-收藏第一篇" class="article article-type-post" itemscope
+  <article id="post-收藏第二篇shell" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -41,7 +41,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  他山之石 可以攻玉
+  Shell的基础命令
 </h1>
   
 
@@ -50,8 +50,8 @@
 
     
     <div class="article-meta">
-      <a href="/2020/ck5tmgkzv0001bwunfjcod0ql/" class="article-date">
-  <time datetime="2020-01-25T03:35:10.000Z" itemprop="datePublished">2020-01-25</time>
+      <a href="/2020/ck5wdozxt0002gcun9tbpb92m/" class="article-date">
+  <time datetime="2020-01-25T07:10:20.000Z" itemprop="datePublished">2020-01-25</time>
 </a>
       
     </div>
@@ -72,14 +72,17 @@
       
 
       
-      <p>写些什么呢？(待更新…)</p>
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;bash</span><br><span class="line"></span><br><span class="line">#第一行语句非常重要，它表明这个文本是在执行 bash 命令。</span><br><span class="line">#其中&quot;#&quot;是注释符号，表明在执行程序时不运行&quot;#&quot;后面同一行的语句。</span><br><span class="line"></span><br><span class="line">#创建文档</span><br><span class="line">touch filename    #创建一个名为“filename” 的空白文档</span><br><span class="line"></span><br><span class="line">#写入简单的字符</span><br><span class="line">echo &quot;ABC&quot; &gt; filename   #将 ABC 写入到 filename 文档中(其实这个命令较少用到)</span><br><span class="line"></span><br><span class="line">#复制文档</span><br><span class="line">cp -r filename filename1   #复制 filename 到 filename1。 </span><br><span class="line">#cp 是复制命令， -r 表示复制该目录下所有的子目录和文件。</span><br><span class="line">cp -r filename filename2   #再次复制 filename 到 filename2</span><br><span class="line"></span><br><span class="line">#删除文档</span><br><span class="line">rm -rf filename2  #删除文档 filename2. 请谨慎使用，一旦删除，无法找回！！！</span><br><span class="line"></span><br><span class="line">#建立文件夹</span><br><span class="line">mkdir test1 #建立 test1 文件夹</span><br><span class="line"></span><br><span class="line">#将 filename 文档移动到 test1 文件夹里</span><br><span class="line">mv filename test1&#x2F; #将 filename 文档移动到 test1 文件夹里</span><br><span class="line"></span><br><span class="line">#循环</span><br><span class="line">initial&#x3D;0</span><br><span class="line">final&#x3D;3</span><br><span class="line">for (( i&#x3D;$initial; i&lt;$final; i++ ))</span><br><span class="line">do</span><br><span class="line">cp -r test1 job-$i</span><br><span class="line">done</span><br><span class="line">#其中$i是调用变量语句，job-$i 在该循环下依次取 job-0,job-1,job-2。</span><br><span class="line">#这个循环语句目的是将 test1 文件夹复制 3 份，分别取名为 job-0,job-1 和 job-2。</span><br><span class="line"></span><br><span class="line">#切换目录</span><br><span class="line">cd job-2          #现在进入 job-2 文件夹</span><br><span class="line">rm -rf filename   #删除了 job-2 文件夹里的 filename 文件</span><br><span class="line">cd ..             #从 job-2 文件夹里退出来</span><br><span class="line"></span><br><span class="line">#赋权限</span><br><span class="line">chmod -R 777 *    #赋予当前目录下所有文件读写及执行权限</span><br><span class="line"></span><br><span class="line">#将上述语句复制到空白文本中，并命名为 name.sh。 </span><br><span class="line">#打开终端，在该文档所在目录下输入.&#x2F;name.sh 即可运行该脚本程序。</span><br></pre></td></tr></table></figure>
+
+<p><strong>参考文献</strong></p>
+<p><a href="https://www.runoob.com/linux/linux-shell.html" target="_blank" rel="noopener">https://www.runoob.com/linux/linux-shell.html</a></p>
 
       
       <!-- 打赏 -->
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mingli-phy.github.io/2020/ck5tmgkzv0001bwunfjcod0ql/" data-id="ck5tmgkzv0001bwunfjcod0ql"
+      <a data-url="https://mingli-phy.github.io/2020/ck5wdozxt0002gcun9tbpb92m/" data-id="ck5wdozxt0002gcun9tbpb92m"
         class="article-share-link">分享</a>
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%94%B6%E8%97%8F/" rel="tag">收藏</a></li></ul>
@@ -92,19 +95,19 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/ck4o8c2zl0000w8ung5sh3zsg/" class="article-nav-link">
+      <a href="/2020/ck5w6cvr70002v0un0rqr1dh7/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            利用Github和Hexo搭建个人博客
+            漫话物理史(一)
           
         </div>
       </a>
     
     
-      <a href="/2020/ck5tmgkzx0003bwun0ktn4i2f/" class="article-nav-link">
+      <a href="/2020/ck4o8c2zl0000w8ung5sh3zsg/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">专注地做一些事情</div>
+        <div class="article-nav-title">利用Github和Hexo搭建个人博客</div>
       </a>
     
   </nav>
